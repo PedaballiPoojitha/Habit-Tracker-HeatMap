@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit Tracker - Calendar Heatmap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🌱 Habit Tracker</h2>
+
+    <div class="month-nav">
+        <button onclick="changeMonth(-1)">◀</button>
+        <span id="monthYear"></span>
+        <button onclick="changeMonth(1)">▶</button>
+    </div>
+
+    <div class="calendar" id="calendar"></div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div id="streak">🔥 Streak: 0 days</div>
+        <div id="total">✅ Total: 0</div>
+        <div id="progress">📊 Progress: 0%</div>
+    </div>
+
+    <button class="reset-btn" onclick="resetMonth()">Reset This Month</button>
+
+    <!-- Legend -->
+    <div class="legend">
+        <span>Less</span>
+        <div>
+            <span class="legend-box level-0"></span>
+            <span class="legend-box level-1"></span>
+            <span class="legend-box level-2"></span>
+            <span class="legend-box level-3"></span>
+            <span class="legend-box level-4"></span>
+        </div>
+        <span>More</span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

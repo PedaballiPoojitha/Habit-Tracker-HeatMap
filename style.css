@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #af4398, #72809e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.month-nav button {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #5b86e5;
+    color: white;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.month-nav button:hover {
+    background: #3b6bdc;
+}
+
+/* Calendar */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.day-name {
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.day {
+    height: 45px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    position: relative;
+}
+
+.day:hover {
+    transform: scale(1.05);
+}
+
+.day:active {
+    transform: scale(0.9);
+}
+
+/* Heatmap Colors */
+.level-0 { background: #ebedf0; }
+.level-1 { background: #c6e48b; }
+.level-2 { background: #7bc96f; }
+.level-3 { background: #239a3b; color: white; }
+.level-4 { background: #196127; color: white; }
+
+/* Today Highlight */
+.today {
+    border: 2px solid #2563eb;
+}
+
+.empty {
+    background: transparent;
+    cursor: default;
+}
+
+/* Stats */
+.stats {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Reset Button */
+.reset-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 6px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reset-btn:hover {
+    background: #dc2626;
+}
+
+/* Legend */
+.legend {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.legend-box {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    display: inline-block;
+}
